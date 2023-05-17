@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">TestPractice</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="series_list">Series List</string>
+    <string name="description">Lista de las series mas populares</string>
+    <string name="fab_buttonDescription">FAB button</string>
+    <string name="hintGenre">Genre</string>
+    <string name="hintTitle">Title</string>
+    <string name="agregarButtonText">Agregar</string>
+    <string name="verButtonText">ver</string>
+    <string name="seriesImageDescription">SeriesImage</string>
+    <string name="agregarSerieTitle">Agregar Serie</string>
+    <string name="buttoncontentdescription">buttonContentDescription</string>
 </resources>

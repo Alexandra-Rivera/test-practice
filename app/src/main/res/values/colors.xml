@@ -2,4 +2,11 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="cardBackground">#4D02C6</color>
+    <color name="backgroundColor">#040A2E</color>
+    <color name="buttonColor">#5EC9D7</color>
+    <color name="mainTitleColor">#BFE2EF</color>
+    <color name="seriesTitleTextColor">#A6F4F0</color>
+    <color name="seriesGenreTextColor">#2BDCFF</color>
+    <color name="agregarButtonColor">#D5F7FE</color>
 </resources>
