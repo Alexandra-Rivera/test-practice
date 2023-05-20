@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/seriesListFragment"
-        android:name="com.testpractice.SeriesListFragment"
+        android:name="com.testpractice.ui.seriesList.SeriesListFragment"
         android:label="fragment_series_list"
         tools:layout="@layout/fragment_series_list" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/newSeriesFragment"
-        android:name="com.testpractice.NewSeriesFragment"
+        android:name="com.testpractice.ui.newSeries.NewSeriesFragment"
         android:label="fragment_new_series"
         tools:layout="@layout/fragment_new_series" />
     <fragment
