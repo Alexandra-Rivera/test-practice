@@ -1,4 +1,4 @@
-package com.testpractice.modelo
+package com.testpractice.data.modelo
 
 data class SerieModel(
     var name: String,

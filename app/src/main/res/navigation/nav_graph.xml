@@ -24,7 +24,7 @@
         tools:layout="@layout/fragment_new_series" />
     <fragment
         android:id="@+id/seriesInfoFragment"
-        android:name="com.testpractice.SeriesInfoFragment"
+        android:name="com.testpractice.ui.SeriesInfoFragment"
         android:label="fragment_series_info"
         tools:layout="@layout/fragment_series_info" />
 </navigation>

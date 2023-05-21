@@ -1,7 +1,7 @@
 package com.testpractice
 
 import android.app.Application
-import com.testpractice.modelo.serie
+import com.testpractice.data.modelo.serie
 import com.testpractice.repository.SerieRepository
 
 class SeriesReviewerApplication: Application() {

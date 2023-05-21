@@ -1,6 +1,6 @@
 package com.testpractice.repository
 
-import com.testpractice.modelo.SerieModel
+import com.testpractice.data.modelo.SerieModel
 
 class SerieRepository(private val seriesList: MutableList<SerieModel>) {
     fun getSeries() = seriesList

@@ -8,8 +8,7 @@ import androidx.lifecycle.ViewModelProvider.AndroidViewModelFactory.Companion.AP
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import com.testpractice.SeriesReviewerApplication
-import com.testpractice.modelo.SerieModel
-import com.testpractice.modelo.serie
+import com.testpractice.data.modelo.SerieModel
 import com.testpractice.repository.SerieRepository
 import com.testpractice.ui.seriesList.SeriesListFragment
 
