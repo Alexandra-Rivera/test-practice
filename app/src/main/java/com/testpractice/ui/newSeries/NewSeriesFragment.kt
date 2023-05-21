@@ -5,18 +5,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.testpractice.R
+import com.testpractice.databinding.FragmentNewSeriesBinding
 
 class NewSeriesFragment : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+    private lateinit var binding: FragmentNewSeriesBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_new_series, container, false)
+        binding = FragmentNewSeriesBinding.inflate(inflater, container, false)
+        return binding.root
     }
 }

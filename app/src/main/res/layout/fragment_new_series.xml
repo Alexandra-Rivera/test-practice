@@ -1,55 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/backgroundColor"
-    tools:context=".ui.newSeries.NewSeriesFragment">
-
-
-    <LinearLayout
+<layout>
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.testpractice.ui.viewmodel.SeriesViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_height="match_parent"
+        tools:context=".SeriesInfoFragment"
+        android:padding="25dp"
+        android:background="@color/backgroundColor"
         >
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="15dp"
+                android:text="@string/agregarSerieTitle"
+                android:textColor="@color/mainTitleColor"
+                android:textSize="42sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/seriesTitleOutlinedTextField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center"
+                app:boxStrokeColor="@color/mainTitleColor"
+                android:hint="@string/hintTitle"
+                app:hintTextColor="@color/hintTextColor"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/seriesName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@={viewmodel.name}"
+                    android:textColor="@color/white"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/seriesGenreOutlinedTextField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/mainTitleColor"
+                android:hint="@string/hintGenre"
+                app:hintTextColor="@color/hintTextColor"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/seriesGenre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@={viewmodel.genre}"
+                    android:textColor="@color/white"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/addNewSeriesButton"
+            style="@style/Widget.Material3.Button.TonalButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:contentDescription="@string/buttoncontentdescription"
-            android:src="@drawable/baseline_navigate_before_24"
+            android:text="@string/agregarButtonText"
+            android:backgroundTint="@color/agregarButtonColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+            android:onClick="@{() -> viewmodel.createNewSerie()}"
             />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/game_of_thrones_title_card"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="20dp"
-            android:contentDescription="@string/seriesImageDescription"
-            />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:text="Game of Thrones"
-            android:text=""
-            android:textSize="45sp"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            />
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:text="Ciencia ficcion"
-            android:text=""
-            android:textSize="30sp"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            />
-    </LinearLayout>
-</FrameLayout>

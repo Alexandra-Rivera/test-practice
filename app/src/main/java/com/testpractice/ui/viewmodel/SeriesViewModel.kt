@@ -1,6 +1,8 @@
 package com.testpractice.ui.viewmodel
 
 import android.text.Spannable.Factory
+import android.widget.Toast
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider.AndroidViewModelFactory.Companion.APPLICATION_KEY
 import androidx.lifecycle.viewmodel.initializer
@@ -11,10 +13,41 @@ import com.testpractice.modelo.serie
 import com.testpractice.repository.SerieRepository
 import com.testpractice.ui.seriesList.SeriesListFragment
 
-class SeriesViewModel(private var seriesRepository: SerieRepository): ViewModel() {
-    fun getSeries() = seriesRepository.getSeries()
+class SeriesViewModel(private val serieRepository: SerieRepository): ViewModel() {
+    val name = MutableLiveData("")
+    val genre = MutableLiveData("")
+    val status = MutableLiveData("")
 
-    fun addSeries(newSerie: SerieModel) = seriesRepository.addSeries(newSerie)
+    fun getSeries() = serieRepository.getSeries()
+
+     fun createNewSerie(){
+        if (!dataValidation()){
+            status.value = WRONG_INFORMATION
+        }
+        val newSerie = SerieModel(name.value!!, genre.value!!)
+        serieRepository.addSeries(newSerie)
+
+        clearData()
+
+        status.value = NEWSERIE_ADDED
+    }
+
+    private fun dataValidation(): Boolean{
+        when{
+            name.value.isNullOrEmpty() -> return false
+            genre.value.isNullOrEmpty() -> return false
+        }
+        return true
+    }
+
+    fun clearData(){
+        name.value = ""
+        genre.value = ""
+    }
+
+    fun clearStatus(){
+        status.value = INACTIVE
+    }
 
     companion object{
         val Factory = viewModelFactory {
@@ -23,5 +56,9 @@ class SeriesViewModel(private var seriesRepository: SerieRepository): ViewModel(
                 SeriesViewModel(app.SerieRepository)
             }
         }
+        const val NEWSERIE_ADDED = "Serie aniadida"
+        const val WRONG_INFORMATION = "Wrong Information"
+        const val INACTIVE = ""
     }
+
 }
