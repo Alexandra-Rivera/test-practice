@@ -2,8 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="cardBackground">#4D02C6</color>
-    <color name="backgroundColor">#040A2E</color>
+    <color name="cardBackground">#6363DA</color>
+<!--    <color name="cardBackground">#4D02C6</color>-->
+    <color name="backgroundColor">#1B103E</color>
     <color name="buttonColor">#D8DAF2</color>
     <color name="mainTitleColor">#BFE2EF</color>
     <color name="seriesTitleTextColor">#A6F4F0</color>

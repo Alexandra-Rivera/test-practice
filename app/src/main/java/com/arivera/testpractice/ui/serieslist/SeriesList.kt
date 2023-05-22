@@ -17,11 +17,10 @@ import com.arivera.testpractice.ui.seriesviewmodel.SeriesViewModel
 
 class SeriesList : Fragment() {
 
-//    private val seriesViewModel : SeriesViewModel by activityViewModels {
-//        SeriesViewModel.Factory
-//    }
-
-//    private lateinit var adapter: SeriesRecyclerViewAdapter
+    private val seriesViewModel: SeriesViewModel by activityViewModels {
+        SeriesViewModel.Factory
+    }
+    private lateinit var adapter: SeriesRecyclerViewAdapter
     private lateinit var binding: FragmentSeriesListBinding
 
     override fun onCreateView(
@@ -35,30 +34,30 @@ class SeriesList : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        setRecyclerView(view)
+        setRecyclerView(view)
         binding.floatingActionButton.setOnClickListener{
             it.findNavController().navigate(R.id.action_seriesList_to_newSeries)
         }
     }
 
-//    private fun showSelectedItem(serie: SeriesModel) {
-//        seriesViewModel.setSeriesData(serie)
-//        findNavController().navigate(R.id.action_seriesList_to_seriesInformation)
-//    }
-//
-//    private fun displaySeries() {
-//        adapter.setData(seriesViewModel.getSeries())
-//        adapter.notifyDataSetChanged()
-//    }
-//
-//    private fun setRecyclerView(view: View) {
-//        binding.seriesRecyclerview.layoutManager = LinearLayoutManager(view.context)
-//            adapter = SeriesRecyclerViewAdapter { selectedSeries ->
-//                showSelectedItem(selectedSeries)
-//            }
-//
-//            binding.seriesRecyclerview.adapter = adapter
-//
-//            displaySeries()
-//    }
+    fun showSelectedItem(serie: SeriesModel) {
+        seriesViewModel.setSelectedSerie(serie)
+        findNavController().navigate(R.id.action_seriesList_to_seriesInformation)
+    }
+
+    fun displaySeries() {
+        adapter.setData(seriesViewModel.getSeries())
+        adapter.notifyDataSetChanged()
+    }
+
+    private fun setRecyclerView(view: View) {
+        binding.seriesRecyclerview.layoutManager = LinearLayoutManager(view.context)
+        adapter = SeriesRecyclerViewAdapter { selectedMovie ->
+            showSelectedItem(selectedMovie)
+        }
+
+        binding.seriesRecyclerview.adapter = adapter
+        displaySeries()
+    }
+
 }

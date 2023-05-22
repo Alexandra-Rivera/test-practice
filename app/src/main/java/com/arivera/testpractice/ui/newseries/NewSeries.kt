@@ -38,7 +38,7 @@ class NewSeries : Fragment() {
     }
 
     private fun statusObserver() {
-        seriesViewModel.status.observe(viewLifecycleOwner){ status ->
+        seriesViewModel.status.observe(viewLifecycleOwner) { status ->
             when{
                 status.equals(SeriesViewModel.CREATED) -> {
                     Log.d(APP_TAG, status)
@@ -55,7 +55,6 @@ class NewSeries : Fragment() {
             }
         }
     }
-
     companion object {
         const val APP_TAG = "APP_TAG"
     }

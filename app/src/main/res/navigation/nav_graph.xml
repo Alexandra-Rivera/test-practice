@@ -26,5 +26,9 @@
         android:id="@+id/seriesInformation"
         android:name="com.arivera.testpractice.ui.SeriesInformation"
         android:label="fragment_series_information"
-        tools:layout="@layout/fragment_series_information" />
+        tools:layout="@layout/fragment_series_information" >
+        <action
+            android:id="@+id/action_seriesInformation_to_seriesList"
+            app:destination="@id/seriesList" />
+    </fragment>
 </navigation>

@@ -62,7 +62,7 @@ class SeriesViewModel(private val seriesRepository: SeriesRepository): ViewModel
         const val INACTIVE = "Inactive"
     }
 
-    fun setSeriesData(serie: SeriesModel) {
+    fun setSelectedSerie(serie: SeriesModel) {
         name.value = serie.name
         genre.value = serie.genre
         sinopsis.value = serie.sinopsis
