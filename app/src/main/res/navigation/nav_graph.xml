@@ -3,28 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/seriesListFragment">
+    app:startDestination="@id/seriesList">
 
     <fragment
-        android:id="@+id/seriesListFragment"
-        android:name="com.testpractice.ui.seriesList.SeriesListFragment"
+        android:id="@+id/seriesList"
+        android:name="com.arivera.testpractice.ui.serieslist.SeriesList"
         android:label="fragment_series_list"
         tools:layout="@layout/fragment_series_list" >
         <action
-            android:id="@+id/action_seriesListFragment_to_newSeriesFragment"
-            app:destination="@id/newSeriesFragment" />
+            android:id="@+id/action_seriesList_to_newSeries"
+            app:destination="@id/newSeries" />
         <action
-            android:id="@+id/action_seriesListFragment_to_seriesInfoFragment"
-            app:destination="@id/seriesInfoFragment" />
+            android:id="@+id/action_seriesList_to_seriesInformation"
+            app:destination="@id/seriesInformation" />
     </fragment>
     <fragment
-        android:id="@+id/newSeriesFragment"
-        android:name="com.testpractice.ui.newSeries.NewSeriesFragment"
+        android:id="@+id/newSeries"
+        android:name="com.arivera.testpractice.ui.newseries.NewSeries"
         android:label="fragment_new_series"
         tools:layout="@layout/fragment_new_series" />
     <fragment
-        android:id="@+id/seriesInfoFragment"
-        android:name="com.testpractice.SeriesInfoFragment"
-        android:label="fragment_series_info"
-        tools:layout="@layout/fragment_series_info" />
+        android:id="@+id/seriesInformation"
+        android:name="com.arivera.testpractice.ui.SeriesInformation"
+        android:label="fragment_series_information"
+        tools:layout="@layout/fragment_series_information" />
 </navigation>

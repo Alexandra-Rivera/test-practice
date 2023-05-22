@@ -7,6 +7,7 @@
     <string name="fab_buttonDescription">FAB button</string>
     <string name="hintGenre">Genre</string>
     <string name="hintTitle">Title</string>
+    <string name="hintSinopsis">Sinopsis</string>
     <string name="agregarButtonText">Agregar</string>
     <string name="verButtonText">ver</string>
     <string name="seriesImageDescription">SeriesImage</string>

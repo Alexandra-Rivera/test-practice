@@ -1,4 +1,4 @@
-package com.testpractice
+package com.arivera.testpractice
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

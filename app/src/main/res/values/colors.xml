@@ -4,10 +4,11 @@
     <color name="white">#FFFFFFFF</color>
     <color name="cardBackground">#4D02C6</color>
     <color name="backgroundColor">#040A2E</color>
-    <color name="buttonColor">#5EC9D7</color>
+    <color name="buttonColor">#D8DAF2</color>
     <color name="mainTitleColor">#BFE2EF</color>
     <color name="seriesTitleTextColor">#A6F4F0</color>
     <color name="seriesGenreTextColor">#2BDCFF</color>
     <color name="agregarButtonColor">#D5F7FE</color>
     <color name="hintTextColor">#62DDD4</color>
+    <color name="staticHintTextColor">#8D99A0</color>
 </resources>
